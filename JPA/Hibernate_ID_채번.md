@@ -52,8 +52,9 @@ private Long studentId;
 - MySQL 에서 auto_increment 를 컬럼에 지정해 테이블을 생성하고 Identity 명시
 - 해당 전략을 사용하면 하이버네이트의 batch insert 즉 벌크 삽입 사용이 불가
 
-> batch insert 는 대량의 INSERT 쿼리를 실행하는 기능인데, auto_increment 전략이 사용되는 Identity 경우 DB에 insert 해야 Id가 채번된다.
-> 또한, 하이버네이트는 트랜잭션 마지막에 flush해 DB에 Insert하는 쓰기 지연 방시을 사용한다. 하지만 batch insert는 여러 트랜잭션이 들어오는 것을 대비 ID 값을 먼저 알고 있어야하나 이러한 방식이 불가능하다. 
+> batch insert 는 대량의 INSERT 쿼리를 실행하는 기능으로, auto_increment 전략이 사용되는 Identity 경우 DB에 insert 해야 Id가 채번된다.
+> 또한, 하이버네이트는 트랜잭션 마지막에 flush해 DB에 Insert하는 쓰기 지연 방식을 사용한다.
+> 하지만 batch insert는 여러 트랜잭션이 들어오는 것을 대비 ID 값을 먼저 알고 있어야하기에 batch insert 방식이 불가능하다. 
 
 
 ---
