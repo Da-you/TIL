@@ -9,9 +9,9 @@ List 인터페이스
 
 ## 종류
 
-- ArrayList
+- ArrayList 동기화 x
 - LinkedList
-- Vector
+- Vector 동기화 o
 - Stack
 
 ## 메서드
